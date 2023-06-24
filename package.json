@@ -1,0 +1,27 @@
+{
+  "name": "linkedin-saver",
+  "version": "1.0.0",
+  "description": "Linkedin Linkedin page saver, image and pdf grabber",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dev-alt/linkedin-saver.git"
+  },
+  "keywords": [
+    "Linkedin",
+    "Image",
+    "PDF"
+  ],
+  "author": "Andrew",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dev-alt/linkedin-saver/issues"
+  },
+  "homepage": "https://github.com/dev-alt/linkedin-saver#readme",
+  "dependencies": {
+    "web-ext": "^7.6.2"
+  }
+}
