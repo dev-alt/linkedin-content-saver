@@ -22,7 +22,18 @@ browser.runtime.onMessage.addListener((message, sender, sendResponse) => {
   }
   
   function pullPDF(pdfUrl) {
-    // Implement code to pull the PDF
-    // e.g., use the downloads API to download the PDF
+    // Use the downloads API to download the PDF
+    chrome.downloads.download({
+      url: pdfUrl,
+      filename: 'downloaded_pdf.pdf',
+      saveAs: false // Change to true if you want to prompt the user to choose the download location
+    }, function(downloadId) {
+      // Handle the download completion
+      if (downloadId !== undefined) {
+        console.log('PDF download started.');
+      } else {
+        console.log('PDF download failed.');
+      }
+    });
   }
   

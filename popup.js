@@ -11,8 +11,10 @@ document.getElementById("saveLinkBtn").addEventListener("click", () => {
   });
   
   document.getElementById("pullPDFBtn").addEventListener("click", () => {
-    const pdfUrl = "<PDF URL to pull>";
-    sendMessageToBackgroundScript({ action: "pullPDF", pdfUrl });
+    const pdfUrls = [ /* Array of PDF URLs to pull */ ];
+    pdfUrls.forEach((pdfUrl) => {
+      sendMessageToBackgroundScript({ action: "pullPDF", pdfUrl });
+    });
   });
   
   function sendMessageToBackgroundScript(message) {
